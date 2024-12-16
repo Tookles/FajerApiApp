@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace FakerApiApp.Class
+namespace FakerApiApp.Class.FakerApi
 {
     public class FakerApi
     {

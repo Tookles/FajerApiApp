@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
-using System.Text.Json.Serialization; 
+using System.Text.Json.Serialization;
 
-namespace FakerApiApp.Class
+namespace FakerApiApp.Class.FakerApi
 {
     public class Response
     {
         [JsonPropertyName("status")]
-        public String status {  get; set; }
+        public string status { get; set; }
 
 
         [JsonPropertyName("code")]

@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace FakerApiApp.Class
+namespace FakerApiApp.Class.FakerApi
 {
     public class Book
     {
@@ -28,7 +28,7 @@ namespace FakerApiApp.Class
         public string ISBN { get; set; }
 
         [JsonPropertyName("image")]
-        public string Image {  get; set; }
+        public string Image { get; set; }
 
         [JsonPropertyName("publisher")]
         public string Publisher { get; set; }

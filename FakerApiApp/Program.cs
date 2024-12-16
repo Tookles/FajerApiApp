@@ -7,12 +7,16 @@ namespace FakerApiApp
         static async Task Main(string[] args)
         {
 
-           Response? returnResponse =  await FakerApi.GetBooksAsync("10");
+            FlightResponse? response = await SchipolAirport.GetSchipolAirportFlights();
 
-            if (returnResponse != null)
-            {
-                Console.WriteLine(returnResponse.results[0].Author);
-            }
+            Console.WriteLine(response.results[1].FlightName);
+            Console.WriteLine(response.results[1].Route.Visa);
+            Console.WriteLine(response.results[1].Route.Destinations[0]);
+            Console.WriteLine(response.results[1].AircraftType.IataMain);
+
+            Console.WriteLine(response.results[1].FlightId);
+
+
         }
     }
 }
