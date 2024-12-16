@@ -1,10 +1,18 @@
-﻿namespace FakerApiApp
+﻿using FakerApiApp.Class; 
+
+namespace FakerApiApp
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+
+           Response? returnResponse =  await FakerApi.GetBooksAsync();
+
+            if (returnResponse != null)
+            {
+                Console.WriteLine(returnResponse.results[0].Author);
+            }
         }
     }
 }
