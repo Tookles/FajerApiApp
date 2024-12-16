@@ -12,10 +12,11 @@ namespace FakerApiApp.Class
     {
         private static readonly string BASE_URL = "https://fakerapi.it/api/v1/books";
 
-        public static async Task<Response> GetBooksAsync()
+        public static async Task<Response> GetBooksAsync(string param)
         {
             using (HttpClient httpClient = new HttpClient())
             {
+                string url = $"{BASE_URL}?id={param}";
                 try
                 {
                     HttpResponseMessage response = await httpClient.GetAsync(BASE_URL);

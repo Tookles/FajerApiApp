@@ -7,7 +7,7 @@ namespace FakerApiApp
         static async Task Main(string[] args)
         {
 
-           Response? returnResponse =  await FakerApi.GetBooksAsync();
+           Response? returnResponse =  await FakerApi.GetBooksAsync("10");
 
             if (returnResponse != null)
             {
